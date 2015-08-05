@@ -1,5 +1,5 @@
 <?php
-    require_once __DIR__."/../vendor/autload.php";
+    require_once __DIR__."/../vendor/autoload.php";
     require_once __DIR__."/../src/rectangle.php";
 
     $app = new Silex\Application();
@@ -8,12 +8,12 @@
         return "Home";
     });
 
-    $app->("/new_rectangle", function(){
+    $app->get("/new_rectangle", function(){
       return "
       <!DOCTYPE html>
       <html>
       <head>
-        <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css'>'>
+        <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css'>
         <title>Make a rectangle!</title>
       </head>
       <body>
@@ -27,7 +27,7 @@
                 <input id='length' name='length' class='form-control' type='number'>
               </div>
             <div class='form-group'>
-                <label for='width>Enter the width:</label>
+                <label for='width'>Enter the width:</label>
                 <input id='width' name='width' class='form-control' type'number'>
             </div>
             <button type='submit' class='btn-success'>Create!!!</button>
